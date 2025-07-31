@@ -115,19 +115,37 @@ def get_transformer_lens_model(
     if model_name == "Baidicoot/Othello-GPT-Transformer-Lens":
         return HookedTransformer.from_pretrained(model_name).to(device)
 
+    # Load state dict to extract architecture parameters dynamically
+    model_path = f"{MODEL_DIR}{model_name}.pth"
+    state_dict = torch.load(model_path, map_location="cpu")
+    
+    # Extract architecture from state dict
+    embed_shape = state_dict['embed.W_E'].shape
+    d_model = embed_shape[1]
+    vocab_size = embed_shape[0]
+    
+    # Get n_heads from attention weights
+    n_heads = state_dict['blocks.0.attn.W_Q'].shape[0]
+    d_head = state_dict['blocks.0.attn.W_Q'].shape[2]
+    
+    # Get MLP dimension
+    d_mlp = state_dict['blocks.0.mlp.W_in'].shape[1]
+    
+    logger.info(f"Detected model architecture: d_model={d_model}, n_layers={n_layers}, n_heads={n_heads}, d_head={d_head}, d_mlp={d_mlp}")
+
     cfg = HookedTransformerConfig(
         n_layers=n_layers,
-        d_model=D_MODEL,
-        d_head=int(D_MODEL / N_HEADS),
-        n_heads=N_HEADS,
-        d_mlp=D_MODEL * 4,
-        d_vocab=32,
+        d_model=d_model,
+        d_head=d_head,
+        n_heads=n_heads,
+        d_mlp=d_mlp,
+        d_vocab=vocab_size,
         n_ctx=1023,
         act_fn="gelu",
         normalization_type="LNPre",
     )
     model = HookedTransformer(cfg)
-    model.load_state_dict(torch.load(f"{MODEL_DIR}{model_name}.pth"))
+    model.load_state_dict(state_dict)
     model.to(device)
     return model
 
@@ -393,6 +411,7 @@ def populate_probes_dict(
     dataset_prefix,
     model_name,
     n_layers,
+    d_model: int,
 ) -> dict[int, SingleProbe]:
     probes = {}
     for layer in layers:
@@ -404,13 +423,13 @@ def populate_probes_dict(
         )
         linear_probe_MDRRC = torch.randn(
             train_params.modes,
-            D_MODEL,
+            d_model,
             config.num_rows,
             config.num_cols,
             get_one_hot_range(config),
             requires_grad=False,
             device=DEVICE,
-        ) / torch.sqrt(torch.tensor(D_MODEL))
+        ) / torch.sqrt(torch.tensor(d_model))
         linear_probe_MDRRC.requires_grad = True
         logger.info(f"linear_probe shape: {linear_probe_MDRRC.shape}")
 
@@ -812,6 +831,43 @@ def parse_arguments():
         action="store_true",
         help="Enable logging to Weights & Biases. Default is False.",
     )
+    parser.add_argument(
+        "--dataset_prefix",
+        type=str,
+        default="lichess_",
+        help='Dataset prefix (e.g., "lichess_", "stockfish_"). Default is "lichess_".',
+    )
+    parser.add_argument(
+        "--model_size",
+        type=str,
+        choices=["small", "medium", "large"],
+        default="small",
+        help='Model size prefix (small, medium, large). Default is "small".',
+    )
+    parser.add_argument(
+        "--n_layers",
+        type=int,
+        default=8,
+        help="Number of layers in the model. Default is 8.",
+    )
+    parser.add_argument(
+        "--model_name",
+        type=str,
+        default=None,
+        help='Model name (e.g., "tf_lens_small-36-600k_iters"). If not provided, will use tf_lens_{model_size}-{n_layers}-600k_iters format.',
+    )
+    parser.add_argument(
+        "--first_layer",
+        type=int,
+        default=0,
+        help="First layer to train probes for. Default is 0.",
+    )
+    parser.add_argument(
+        "--last_layer",
+        type=int,
+        default=None,
+        help="Last layer to train probes for. If not provided, defaults to n_layers - 1.",
+    )
 
     args = parser.parse_args()
     return args
@@ -898,15 +954,21 @@ if __name__ == "__main__":
         othello = False
 
         player_color = PlayerColor.WHITE
-        first_layer = 0
-        last_layer = 7
-
-        # When training a probe, you have to set all parameters such as model name, dataset prefix, etc.
-        dataset_prefix = "lichess_"
+        
+        # Use command line arguments
+        dataset_prefix = args.dataset_prefix
+        model_size = args.model_size
+        n_layers = args.n_layers
+        first_layer = args.first_layer
+        last_layer = args.last_layer if args.last_layer is not None else n_layers - 1
+        
+        # Set model name
+        if args.model_name is not None:
+            model_name = args.model_name
+        else:
+            model_name = f"tf_lens_{model_size}-{n_layers}-600k_iters"
 
         split = "train"
-        n_layers = 8
-        model_name = f"tf_lens_{dataset_prefix}{n_layers}layers_ckpt_no_optimizer"
         indexing_function = None
 
         if othello:
@@ -942,6 +1004,7 @@ if __name__ == "__main__":
             dataset_prefix,
             model_name,
             n_layers,
+            probe_data.model.cfg.d_model,
         )
 
         train_linear_probe_cross_entropy(probes, probe_data, config, TRAIN_PARAMS)

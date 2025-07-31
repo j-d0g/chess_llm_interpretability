@@ -602,7 +602,7 @@ class Config:
     max_val: int
     custom_board_state_function: callable
     linear_probe_name: str
-    custom_indexing_function: callable = find_dots_indices
+    custom_indexing_function: callable = find_spaces_indices
     num_rows: int = 8
     num_cols: int = 8
     levels_of_interest: Optional[list[int]] = None
@@ -730,7 +730,7 @@ def update_config_using_player_color(
         return config
 
     if player_color == PlayerColor.WHITE:
-        config.custom_indexing_function = find_dots_indices
+        config.custom_indexing_function = find_spaces_indices
         config.player_color = player_color
 
     if player_color == PlayerColor.BLACK:
