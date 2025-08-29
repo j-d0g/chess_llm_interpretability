@@ -1,0 +1,41 @@
+=== Job Info ===
+Job ID: 3957754
+Node: node851
+GPU Info:
+Thu Jul 31 17:40:21 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   30C    P0             57W /  500W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+===================
+Testing small-36 probe training on A100...
+Current directory: /mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/scratch/chess_llm_interpretability
+Available files:
+-rw-r--r-- 1 j74739jt fse-ugpgt01 493756858 Jul 31 16:13 models/tf_lens_small-36-600k_iters.pth
+-rw-r--r-- 1 j74739jt fse-ugpgt01 5689179 Jul 31 16:39 data/small_36_train.csv
+=== Starting Python Test ===
+PyTorch version: 2.2.2+cu121
+CUDA available: True
+GPU: NVIDIA A100-SXM4-80GB
+GPU Memory: 85.1 GB
+Testing imports...
+✅ All imports successful!
+Testing model loading...
+✅ Model file found: models/tf_lens_small-36-600k_iters.pth
+✅ A100 test completed successfully!
+=== Test Complete ===

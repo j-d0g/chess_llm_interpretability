@@ -1,0 +1,13 @@
+ERROR: Unable to locate a modulefile for 'Python/3.10.8-GCCcore-12.2.0'
+🎲 Creating and training probes on RANDOM WEIGHTS small-24 model
+Starting at Fri  1 Aug 04:02:55 BST 2025
+🎲 Loading original small-24 model...
+🎲 Randomizing weights...
+✅ Randomized 76,164,640 out of 101,281,360 parameters (75.2%)
+✅ Saved randomized model to models/tf_lens_small-24_RANDOM.pth
+🔍 Verification - Are embed weights identical? False
+✅ Randomization verified - weights are different
+🧪 Training probes on randomized small-24 model...
+Moving model to device:  cuda
+Shortest length: 32
+✅ Random small-24 probe training completed at Fri  1 Aug 04:42:52 BST 2025

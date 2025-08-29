@@ -1,0 +1,13 @@
+ERROR: Unable to locate a modulefile for 'Python/3.10.8-GCCcore-12.2.0'
+🎲 Creating and training probes on RANDOM WEIGHTS medium-16 model
+Starting at Fri  1 Aug 04:31:51 BST 2025
+🎲 Loading original medium-16 model...
+🎲 Randomizing weights...
+✅ Randomized 114,191,648 out of 130,936,128 parameters (87.2%)
+✅ Saved randomized model to models/tf_lens_medium-16_RANDOM.pth
+🔍 Verification - Are embed weights identical? False
+✅ Randomization verified - weights are different
+🧪 Training probes on randomized medium-16 model...
+Moving model to device:  cuda
+Shortest length: 32
+✅ Random medium-16 probe training completed at Fri  1 Aug 05:01:52 BST 2025

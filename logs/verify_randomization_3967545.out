@@ -1,0 +1,60 @@
+ERROR: Unable to locate a modulefile for 'Python/3.10.8-GCCcore-12.2.0'
+🔍 FINAL VERIFICATION: Checking all randomized models
+Starting at Fri  1 Aug 10:46:08 BST 2025
+= batch_process_models.py board_state_interventions.py caa.py chess_utils.py combined_results.csv contrastive_activations data docs download_games_data.py extract_results.py final_verification_job.sh images lichess_data_filtering.ipynb linear_probes logs models model_setup.py othello_engine_utils.py othello_utils.py probe_output_visualization.ipynb __pycache__ README.md requirements.txt run_test_evaluations.py submit_all_random_tests.sh submit_all_tests.sh submit_missing_tests.sh test_all_models_comprehensive.sh test_large16_probes.sh test_medium16_probes.sh test_missing_large16_layers.sh test_missing_layers_LONG.sh test_missing_medium16_layer.sh test_missing_small36_layers.sh test_random_large16_probes.sh test_random_medium16_probes.sh test_random_models_a100.sh test_random_small16_probes.sh test_random_small24_probes.sh test_random_small36_probes.sh test_random_small_models_v100.sh test_results.csv tests test_small24_probes.sh test_small24_probes_v100.sh test_small36_probes.sh test_small36_probes_v100.sh test_trained_models_a100.sh test_trained_small_models_v100.sh training_results.csv train_large16_a100.sh train_medium12_cpu.sh train_medium16_v100.sh train_random_large16_a100.sh train_random_large16_v100.sh train_random_medium16_a100.sh train_random_medium16_v100.sh train_random_small16_v100.sh train_random_small24_a100.sh train_random_small36_v100.sh train_small16_a100.sh train_small24_v100.sh train_small36_a100.sh train_test_chess.py utils verify_randomization.py 60
+🎲 RANDOMIZATION VERIFICATION
+============================================================
+
+🔍 Verifying randomization for small-16
+==================================================
+✅ embed.W_E: DIFFERENT (mean diff: 0.053597)
+✅ blocks.0.attn.W_Q: DIFFERENT (mean diff: 0.132940)
+✅ blocks.0.mlp.W_in: DIFFERENT (mean diff: 0.023756)
+✅ unembed.W_U: DIFFERENT (mean diff: 0.063775)
+✅ small-16: PROPERLY RANDOMIZED
+
+🔍 Verifying randomization for small-24
+==================================================
+✅ embed.W_E: DIFFERENT (mean diff: 0.053468)
+✅ blocks.0.attn.W_Q: DIFFERENT (mean diff: 0.132774)
+✅ blocks.0.mlp.W_in: DIFFERENT (mean diff: 0.024977)
+✅ unembed.W_U: DIFFERENT (mean diff: 0.060977)
+✅ small-24: PROPERLY RANDOMIZED
+
+🔍 Verifying randomization for small-36
+==================================================
+✅ embed.W_E: DIFFERENT (mean diff: 0.052676)
+✅ blocks.0.attn.W_Q: DIFFERENT (mean diff: 0.132784)
+✅ blocks.0.mlp.W_in: DIFFERENT (mean diff: 0.024819)
+✅ unembed.W_U: DIFFERENT (mean diff: 0.060215)
+✅ small-36: PROPERLY RANDOMIZED
+
+🔍 Verifying randomization for medium-16
+==================================================
+✅ embed.W_E: DIFFERENT (mean diff: 0.044537)
+✅ blocks.0.attn.W_Q: DIFFERENT (mean diff: 0.129622)
+✅ blocks.0.mlp.W_in: DIFFERENT (mean diff: 0.018843)
+✅ unembed.W_U: DIFFERENT (mean diff: 0.048399)
+✅ medium-16: PROPERLY RANDOMIZED
+
+🔍 Verifying randomization for large-16
+==================================================
+✅ embed.W_E: DIFFERENT (mean diff: 0.039899)
+✅ blocks.0.attn.W_Q: DIFFERENT (mean diff: 0.126167)
+✅ blocks.0.mlp.W_in: DIFFERENT (mean diff: 0.016464)
+✅ unembed.W_U: DIFFERENT (mean diff: 0.040575)
+✅ large-16: PROPERLY RANDOMIZED
+
+============================================================
+📊 VERIFICATION SUMMARY
+============================================================
+small-16    : ✅ PASS
+small-24    : ✅ PASS
+small-36    : ✅ PASS
+medium-16   : ✅ PASS
+large-16    : ✅ PASS
+
+🎯 Overall: 5/5 models properly randomized
+🎉 All randomized models are verified!
+
+✅ Verification completed at Fri  1 Aug 10:48:00 BST 2025

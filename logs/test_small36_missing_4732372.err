@@ -1,0 +1,12 @@
+
+EnvironmentNameNotFound: Could not find conda environment: chess_llm_interpretability
+You can list all discoverable environments with `conda info --envs`.
+
+
+/mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/.local/lib/python3.9/site-packages/transformers/utils/generic.py:462: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/.local/lib/python3.9/site-packages/transformers/utils/generic.py:319: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/.local/lib/python3.9/site-packages/transformers/utils/generic.py:319: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+slurmstepd: error: *** JOB 4732372 ON node803 CANCELLED AT 2025-08-25T04:14:03 ***

@@ -1,0 +1,26 @@
+{
+  "trained_large": {
+    "count": 44,
+    "mean": 0.8909,
+    "min": 0.7622,
+    "max": 0.9972
+  },
+  "random_large": {
+    "count": 44,
+    "mean": 0.662,
+    "min": 0.6379,
+    "max": 0.7097
+  },
+  "trained_small": {
+    "count": 29,
+    "mean": 0.8684,
+    "min": 0.7478,
+    "max": 0.9903
+  },
+  "random_small": {
+    "count": 29,
+    "mean": 0.6719,
+    "min": 0.6557,
+    "max": 0.7102
+  }
+}
