@@ -1,245 +1,0 @@
-/var/spool/slurmd/job3965656/slurm_script: line 15: venv/bin/activate: No such file or directory
-/mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/.local/lib/python3.9/site-packages/transformers/utils/generic.py:462: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
-  _torch_pytree._register_pytree_node(
-/mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/.local/lib/python3.9/site-packages/transformers/utils/generic.py:319: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
-  _torch_pytree._register_pytree_node(
-/mnt/iusers01/fse-ugpgt01/compsci01/j74739jt/.local/lib/python3.9/site-packages/transformers/utils/generic.py:319: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
-  _torch_pytree._register_pytree_node(
-2025-08-01 00:07:03,432 - __main__ - INFO - Using device: cuda
-2025-08-01 00:07:03,433 - __main__ - INFO - {'vocab_size': 32, 'itos': {0: ' ', 1: '#', 2: '+', 3: '-', 4: '.', 5: '0', 6: '1', 7: '2', 8: '3', 9: '4', 10: '5', 11: '6', 12: '7', 13: '8', 14: '9', 15: ';', 16: '=', 17: 'B', 18: 'K', 19: 'N', 20: 'O', 21: 'Q', 22: 'R', 23: 'a', 24: 'b', 25: 'c', 26: 'd', 27: 'e', 28: 'f', 29: 'g', 30: 'h', 31: 'x'}, 'stoi': {' ': 0, '#': 1, '+': 2, '-': 3, '.': 4, '0': 5, '1': 6, '2': 7, '3': 8, '4': 9, '5': 10, '6': 11, '7': 12, '8': 13, '9': 14, ';': 15, '=': 16, 'B': 17, 'K': 18, 'N': 19, 'O': 20, 'Q': 21, 'R': 22, 'a': 23, 'b': 24, 'c': 25, 'd': 26, 'e': 27, 'f': 28, 'g': 29, 'h': 30, 'x': 31}}
-2025-08-01 00:07:03,433 - __main__ - INFO - [6, 4, 27, 9, 0, 27, 11, 0, 7, 4, 19, 28, 8]
-2025-08-01 00:07:03,433 - __main__ - INFO - Performing round trip test on meta
-2025-08-01 00:07:03,814 - __main__ - INFO - Detected model architecture: d_model=768, n_layers=16, n_heads=12, d_head=64, d_mlp=3072
-2025-08-01 00:07:05,758 - __main__ - INFO - Number of games: 11000,length of a game in chars: 365
-2025-08-01 00:07:06,036 - __main__ - INFO - 0    [15, 6, 4, 27, 9, 0, 26, 10, 0, 7, 4, 27, 31, ...
-1    [15, 6, 4, 27, 9, 0, 27, 11, 0, 7, 4, 26, 9, 0...
-2    [15, 6, 4, 27, 9, 0, 27, 10, 0, 7, 4, 19, 28, ...
-3    [15, 6, 4, 27, 9, 0, 25, 11, 0, 7, 4, 26, 9, 0...
-4    [15, 6, 4, 27, 9, 0, 25, 11, 0, 7, 4, 26, 9, 0...
-Name: transcript, dtype: object
-2025-08-01 00:07:06,742 - __main__ - INFO - board_seqs_int shape: torch.Size([11000, 365])
-2025-08-01 00:07:07,106 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,108 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,109 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,109 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,109 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,110 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,110 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,111 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,111 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,111 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,112 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,112 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,112 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,113 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,113 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-2025-08-01 00:07:07,114 - __main__ - INFO - linear_probe shape: torch.Size([1, 768, 8, 8, 13])
-  0%|          | 0/5000 [00:00<?, ?it/s]2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 0, acc 0.080, loss 164.917, avg acc 0.080
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 1, acc 0.078, loss 164.123, avg acc 0.078
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 2, acc 0.048, loss 165.469, avg acc 0.048
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 3, acc 0.101, loss 164.259, avg acc 0.101
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 4, acc 0.051, loss 170.105, avg acc 0.051
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 5, acc 0.083, loss 190.305, avg acc 0.083
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 6, acc 0.060, loss 211.760, avg acc 0.060
-2025-08-01 00:07:07,498 - __main__ - INFO - epoch 0, iter 0, layer 7, acc 0.070, loss 223.051, avg acc 0.070
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 8, acc 0.076, loss 218.031, avg acc 0.076
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 9, acc 0.067, loss 237.859, avg acc 0.067
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 10, acc 0.066, loss 234.453, avg acc 0.066
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 11, acc 0.083, loss 231.557, avg acc 0.083
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 12, acc 0.087, loss 237.115, avg acc 0.087
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 13, acc 0.092, loss 252.066, avg acc 0.092
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 14, acc 0.096, loss 258.654, avg acc 0.096
-2025-08-01 00:07:07,499 - __main__ - INFO - epoch 0, iter 0, layer 15, acc 0.078, loss 210.262, avg acc 0.078
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 0, train loss: 162.930, val loss: 162.893, train acc: 0.112, val acc: 0.112
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 1, train loss: 161.666, val loss: 161.781, train acc: 0.107, val acc: 0.103
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 2, train loss: 162.628, val loss: 162.639, train acc: 0.079, val acc: 0.077
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 3, train loss: 160.897, val loss: 160.739, train acc: 0.164, val acc: 0.163
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 4, train loss: 161.959, val loss: 162.165, train acc: 0.113, val acc: 0.111
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 5, train loss: 179.198, val loss: 179.742, train acc: 0.108, val acc: 0.108
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 6, train loss: 195.745, val loss: 195.080, train acc: 0.096, val acc: 0.097
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 7, train loss: 205.175, val loss: 204.874, train acc: 0.099, val acc: 0.099
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 8, train loss: 203.949, val loss: 204.491, train acc: 0.094, val acc: 0.093
-2025-08-01 00:07:11,775 - __main__ - INFO - epoch 0, layer 9, train loss: 222.238, val loss: 221.454, train acc: 0.092, val acc: 0.094
-2025-08-01 00:07:11,776 - __main__ - INFO - epoch 0, layer 10, train loss: 223.473, val loss: 224.134, train acc: 0.084, val acc: 0.085
-2025-08-01 00:07:11,776 - __main__ - INFO - epoch 0, layer 11, train loss: 224.572, val loss: 225.136, train acc: 0.100, val acc: 0.098
-2025-08-01 00:07:11,776 - __main__ - INFO - epoch 0, layer 12, train loss: 228.691, val loss: 228.492, train acc: 0.091, val acc: 0.094
-2025-08-01 00:07:11,776 - __main__ - INFO - epoch 0, layer 13, train loss: 238.041, val loss: 239.369, train acc: 0.100, val acc: 0.100
-2025-08-01 00:07:11,776 - __main__ - INFO - epoch 0, layer 14, train loss: 246.893, val loss: 248.039, train acc: 0.115, val acc: 0.115
-2025-08-01 00:07:11,776 - __main__ - INFO - epoch 0, layer 15, train loss: 189.718, val loss: 188.423, train acc: 0.120, val acc: 0.123
-  0%|          | 1/5000 [00:04<6:28:07,  4.66s/it]  0%|          | 3/5000 [00:04<1:46:30,  1.28s/it]  0%|          | 5/5000 [00:05<55:43,  1.49it/s]    0%|          | 7/5000 [00:05<35:26,  2.35it/s]  0%|          | 9/5000 [00:05<25:01,  3.32it/s]  0%|          | 11/5000 [00:05<19:01,  4.37it/s]  0%|          | 13/5000 [00:05<15:17,  5.44it/s]  0%|          | 15/5000 [00:05<12:53,  6.45it/s]  0%|          | 17/5000 [00:06<11:17,  7.35it/s]  0%|          | 19/5000 [00:06<13:12,  6.29it/s]  0%|          | 21/5000 [00:06<11:34,  7.17it/s]  0%|          | 23/5000 [00:06<10:26,  7.94it/s]  0%|          | 25/5000 [00:07<09:36,  8.63it/s]  1%|          | 27/5000 [00:07<09:05,  9.12it/s]  1%|          | 29/5000 [00:07<08:42,  9.51it/s]  1%|          | 31/5000 [00:07<08:30,  9.74it/s]  1%|          | 33/5000 [00:07<08:22,  9.89it/s]  1%|          | 35/5000 [00:08<08:10, 10.12it/s]  1%|          | 37/5000 [00:08<08:06, 10.21it/s]  1%|          | 39/5000 [00:08<08:00, 10.33it/s]  1%|          | 41/5000 [00:08<07:56, 10.41it/s]  1%|          | 43/5000 [00:08<07:52, 10.49it/s]  1%|          | 45/5000 [00:09<07:50, 10.52it/s]  1%|          | 47/5000 [00:09<07:49, 10.56it/s]  1%|          | 49/5000 [00:09<07:47, 10.59it/s]2025-08-01 00:07:16,738 - __main__ - INFO - epoch 0, iter 100, layer 0, acc 0.682, loss 80.682, avg acc 0.593
-2025-08-01 00:07:16,738 - __main__ - INFO - epoch 0, iter 100, layer 1, acc 0.703, loss 78.436, avg acc 0.595
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 2, acc 0.694, loss 73.949, avg acc 0.599
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 3, acc 0.698, loss 71.834, avg acc 0.617
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 4, acc 0.705, loss 75.954, avg acc 0.598
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 5, acc 0.709, loss 77.827, avg acc 0.568
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 6, acc 0.706, loss 75.417, avg acc 0.560
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 7, acc 0.699, loss 70.783, avg acc 0.536
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 8, acc 0.715, loss 62.781, avg acc 0.564
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 9, acc 0.720, loss 59.843, avg acc 0.552
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 10, acc 0.718, loss 61.089, avg acc 0.545
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 11, acc 0.708, loss 62.044, avg acc 0.540
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 12, acc 0.705, loss 62.962, avg acc 0.533
-2025-08-01 00:07:16,739 - __main__ - INFO - epoch 0, iter 100, layer 13, acc 0.710, loss 61.971, avg acc 0.527
-2025-08-01 00:07:16,740 - __main__ - INFO - epoch 0, iter 100, layer 14, acc 0.711, loss 60.247, avg acc 0.554
-2025-08-01 00:07:16,740 - __main__ - INFO - epoch 0, iter 100, layer 15, acc 0.701, loss 66.414, avg acc 0.574
-  1%|          | 51/5000 [00:09<07:46, 10.60it/s]  1%|          | 53/5000 [00:09<07:46, 10.61it/s]  1%|          | 55/5000 [00:10<07:48, 10.55it/s]  1%|          | 57/5000 [00:10<07:47, 10.57it/s]  1%|          | 59/5000 [00:10<07:49, 10.52it/s]  1%|          | 61/5000 [00:10<10:42,  7.69it/s]  1%|▏         | 63/5000 [00:11<09:53,  8.33it/s]  1%|▏         | 65/5000 [00:11<09:15,  8.88it/s]  1%|▏         | 66/5000 [00:11<09:05,  9.05it/s]  1%|▏         | 68/5000 [00:11<08:36,  9.55it/s]  1%|▏         | 70/5000 [00:11<08:18,  9.89it/s]  1%|▏         | 72/5000 [00:11<08:09, 10.07it/s]  1%|▏         | 74/5000 [00:12<08:00, 10.24it/s]  2%|▏         | 76/5000 [00:12<07:55, 10.35it/s]  2%|▏         | 78/5000 [00:12<07:52, 10.42it/s]  2%|▏         | 80/5000 [00:12<07:48, 10.51it/s]  2%|▏         | 82/5000 [00:12<07:44, 10.58it/s]  2%|▏         | 84/5000 [00:12<07:44, 10.58it/s]  2%|▏         | 86/5000 [00:13<07:44, 10.58it/s]  2%|▏         | 88/5000 [00:13<07:48, 10.48it/s]  2%|▏         | 90/5000 [00:13<07:45, 10.55it/s]  2%|▏         | 92/5000 [00:13<07:45, 10.53it/s]  2%|▏         | 94/5000 [00:13<07:45, 10.53it/s]  2%|▏         | 96/5000 [00:14<07:42, 10.60it/s]  2%|▏         | 98/5000 [00:14<07:43, 10.57it/s]  2%|▏         | 100/5000 [00:14<10:15,  7.97it/s]2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 0, acc 0.693, loss 61.883, avg acc 0.643
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 1, acc 0.698, loss 61.065, avg acc 0.647
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 2, acc 0.700, loss 59.831, avg acc 0.647
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 3, acc 0.716, loss 58.597, avg acc 0.666
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 4, acc 0.724, loss 59.303, avg acc 0.659
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 5, acc 0.721, loss 60.628, avg acc 0.644
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 6, acc 0.727, loss 59.404, avg acc 0.641
-2025-08-01 00:07:21,917 - __main__ - INFO - epoch 0, iter 200, layer 7, acc 0.729, loss 55.585, avg acc 0.630
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 8, acc 0.740, loss 51.590, avg acc 0.648
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 9, acc 0.753, loss 49.480, avg acc 0.647
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 10, acc 0.760, loss 49.058, avg acc 0.646
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 11, acc 0.760, loss 49.203, avg acc 0.643
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 12, acc 0.758, loss 49.873, avg acc 0.638
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 13, acc 0.757, loss 49.072, avg acc 0.633
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 14, acc 0.747, loss 49.951, avg acc 0.646
-2025-08-01 00:07:21,918 - __main__ - INFO - epoch 0, iter 200, layer 15, acc 0.727, loss 55.719, avg acc 0.644
-  2%|▏         | 102/5000 [00:14<09:30,  8.59it/s]  2%|▏         | 104/5000 [00:15<08:58,  9.09it/s]  2%|▏         | 106/5000 [00:15<08:32,  9.56it/s]  2%|▏         | 108/5000 [00:15<08:17,  9.83it/s]  2%|▏         | 110/5000 [00:15<08:08, 10.00it/s]  2%|▏         | 112/5000 [00:15<07:59, 10.19it/s]  2%|▏         | 114/5000 [00:16<07:53, 10.32it/s]  2%|▏         | 116/5000 [00:16<07:47, 10.44it/s]  2%|▏         | 118/5000 [00:16<07:44, 10.51it/s]  2%|▏         | 120/5000 [00:16<07:41, 10.57it/s]  2%|▏         | 122/5000 [00:16<07:42, 10.54it/s]  2%|▏         | 124/5000 [00:16<07:41, 10.57it/s]  3%|▎         | 126/5000 [00:17<07:37, 10.65it/s]  3%|▎         | 128/5000 [00:17<07:37, 10.65it/s]  3%|▎         | 130/5000 [00:17<07:37, 10.65it/s]  3%|▎         | 132/5000 [00:17<07:35, 10.68it/s]  3%|▎         | 134/5000 [00:17<07:36, 10.66it/s]  3%|▎         | 136/5000 [00:18<07:37, 10.63it/s]  3%|▎         | 138/5000 [00:18<07:36, 10.65it/s]  3%|▎         | 140/5000 [00:18<07:36, 10.64it/s]  3%|▎         | 142/5000 [00:18<07:31, 10.76it/s]  3%|▎         | 144/5000 [00:18<07:30, 10.78it/s]  3%|▎         | 146/5000 [00:19<07:30, 10.77it/s]  3%|▎         | 148/5000 [00:19<07:32, 10.72it/s]  3%|▎         | 150/5000 [00:19<07:32, 10.71it/s]2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 0, acc 0.663, loss 59.667, avg acc 0.665
-2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 1, acc 0.668, loss 58.892, avg acc 0.670
-2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 2, acc 0.672, loss 58.231, avg acc 0.671
-2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 3, acc 0.686, loss 56.440, avg acc 0.689
-2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 4, acc 0.694, loss 56.474, avg acc 0.685
-2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 5, acc 0.704, loss 56.651, avg acc 0.675
-2025-08-01 00:07:26,606 - __main__ - INFO - epoch 0, iter 300, layer 6, acc 0.704, loss 55.594, avg acc 0.674
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 7, acc 0.717, loss 53.289, avg acc 0.669
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 8, acc 0.738, loss 50.316, avg acc 0.684
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 9, acc 0.761, loss 46.897, avg acc 0.689
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 10, acc 0.772, loss 45.380, avg acc 0.690
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 11, acc 0.768, loss 44.977, avg acc 0.688
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 12, acc 0.765, loss 45.864, avg acc 0.683
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 13, acc 0.763, loss 45.520, avg acc 0.679
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 14, acc 0.751, loss 46.905, avg acc 0.685
-2025-08-01 00:07:26,607 - __main__ - INFO - epoch 0, iter 300, layer 15, acc 0.716, loss 53.784, avg acc 0.675
-  3%|▎         | 152/5000 [00:19<07:35, 10.65it/s]  3%|▎         | 154/5000 [00:19<07:35, 10.63it/s]  3%|▎         | 156/5000 [00:19<07:34, 10.65it/s]  3%|▎         | 158/5000 [00:20<07:38, 10.55it/s]  3%|▎         | 160/5000 [00:20<07:42, 10.47it/s]  3%|▎         | 162/5000 [00:20<07:40, 10.52it/s]  3%|▎         | 164/5000 [00:20<07:36, 10.60it/s]  3%|▎         | 166/5000 [00:20<07:33, 10.65it/s]  3%|▎         | 168/5000 [00:21<07:33, 10.65it/s]  3%|▎         | 170/5000 [00:21<07:34, 10.63it/s]  3%|▎         | 172/5000 [00:21<07:36, 10.58it/s]  3%|▎         | 174/5000 [00:21<07:37, 10.55it/s]  4%|▎         | 176/5000 [00:21<07:34, 10.61it/s]  4%|▎         | 178/5000 [00:22<07:41, 10.44it/s]  4%|▎         | 180/5000 [00:22<07:39, 10.50it/s]  4%|▎         | 182/5000 [00:22<07:36, 10.55it/s]  4%|▎         | 184/5000 [00:22<07:34, 10.60it/s]  4%|▎         | 186/5000 [00:22<07:31, 10.66it/s]  4%|▍         | 188/5000 [00:22<07:31, 10.65it/s]  4%|▍         | 190/5000 [00:23<07:29, 10.69it/s]  4%|▍         | 192/5000 [00:23<07:29, 10.69it/s]  4%|▍         | 194/5000 [00:23<07:30, 10.68it/s]  4%|▍         | 196/5000 [00:23<07:30, 10.66it/s]  4%|▍         | 198/5000 [00:23<07:33, 10.60it/s]  4%|▍         | 200/5000 [00:24<07:32, 10.60it/s]2025-08-01 00:07:31,328 - __main__ - INFO - epoch 0, iter 400, layer 0, acc 0.753, loss 51.845, avg acc 0.677
-2025-08-01 00:07:31,328 - __main__ - INFO - epoch 0, iter 400, layer 1, acc 0.755, loss 51.195, avg acc 0.681
-2025-08-01 00:07:31,328 - __main__ - INFO - epoch 0, iter 400, layer 2, acc 0.757, loss 50.838, avg acc 0.683
-2025-08-01 00:07:31,328 - __main__ - INFO - epoch 0, iter 400, layer 3, acc 0.766, loss 48.301, avg acc 0.699
-2025-08-01 00:07:31,328 - __main__ - INFO - epoch 0, iter 400, layer 4, acc 0.757, loss 48.322, avg acc 0.696
-2025-08-01 00:07:31,328 - __main__ - INFO - epoch 0, iter 400, layer 5, acc 0.754, loss 48.978, avg acc 0.688
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 6, acc 0.764, loss 47.936, avg acc 0.689
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 7, acc 0.777, loss 45.021, avg acc 0.687
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 8, acc 0.793, loss 42.749, avg acc 0.702
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 9, acc 0.803, loss 39.557, avg acc 0.711
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 10, acc 0.806, loss 38.458, avg acc 0.714
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 11, acc 0.803, loss 37.863, avg acc 0.712
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 12, acc 0.804, loss 38.694, avg acc 0.708
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 13, acc 0.803, loss 38.809, avg acc 0.703
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 14, acc 0.793, loss 40.223, avg acc 0.706
-2025-08-01 00:07:31,329 - __main__ - INFO - epoch 0, iter 400, layer 15, acc 0.766, loss 45.587, avg acc 0.691
-  4%|▍         | 202/5000 [00:24<07:33, 10.58it/s]  4%|▍         | 204/5000 [00:24<07:33, 10.58it/s]  4%|▍         | 206/5000 [00:24<10:15,  7.78it/s]  4%|▍         | 208/5000 [00:25<09:24,  8.48it/s]  4%|▍         | 210/5000 [00:25<08:48,  9.06it/s]  4%|▍         | 212/5000 [00:25<08:23,  9.51it/s]  4%|▍         | 214/5000 [00:25<08:08,  9.80it/s]  4%|▍         | 216/5000 [00:25<07:59,  9.98it/s]  4%|▍         | 218/5000 [00:26<07:49, 10.18it/s]  4%|▍         | 220/5000 [00:26<07:43, 10.32it/s]  4%|▍         | 222/5000 [00:26<07:39, 10.41it/s]  4%|▍         | 224/5000 [00:26<07:36, 10.46it/s]  5%|▍         | 226/5000 [00:26<07:32, 10.55it/s]  5%|▍         | 228/5000 [00:26<07:32, 10.56it/s]  5%|▍         | 230/5000 [00:27<07:31, 10.56it/s]  5%|▍         | 232/5000 [00:27<07:29, 10.61it/s]  5%|▍         | 234/5000 [00:27<07:28, 10.63it/s]  5%|▍         | 236/5000 [00:27<07:26, 10.67it/s]  5%|▍         | 238/5000 [00:27<07:27, 10.64it/s]  5%|▍         | 240/5000 [00:28<07:27, 10.63it/s]  5%|▍         | 242/5000 [00:28<07:26, 10.65it/s]  5%|▍         | 244/5000 [00:28<07:25, 10.67it/s]  5%|▍         | 246/5000 [00:28<07:27, 10.63it/s]  5%|▍         | 248/5000 [00:28<07:26, 10.64it/s]  5%|▌         | 250/5000 [00:29<07:27, 10.61it/s]2025-08-01 00:07:36,255 - __main__ - INFO - epoch 0, iter 500, layer 0, acc 0.697, loss 57.363, avg acc 0.686
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 1, acc 0.702, loss 56.521, avg acc 0.690
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 2, acc 0.710, loss 56.061, avg acc 0.693
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 3, acc 0.718, loss 54.083, avg acc 0.706
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 4, acc 0.714, loss 53.377, avg acc 0.704
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 5, acc 0.704, loss 53.885, avg acc 0.698
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 6, acc 0.713, loss 52.543, avg acc 0.700
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 7, acc 0.734, loss 48.954, avg acc 0.701
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 8, acc 0.754, loss 46.205, avg acc 0.716
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 9, acc 0.784, loss 42.454, avg acc 0.727
-2025-08-01 00:07:36,256 - __main__ - INFO - epoch 0, iter 500, layer 10, acc 0.799, loss 40.987, avg acc 0.731
-2025-08-01 00:07:36,257 - __main__ - INFO - epoch 0, iter 500, layer 11, acc 0.807, loss 39.944, avg acc 0.731
-2025-08-01 00:07:36,257 - __main__ - INFO - epoch 0, iter 500, layer 12, acc 0.802, loss 40.719, avg acc 0.726
-2025-08-01 00:07:36,257 - __main__ - INFO - epoch 0, iter 500, layer 13, acc 0.796, loss 41.792, avg acc 0.721
-2025-08-01 00:07:36,257 - __main__ - INFO - epoch 0, iter 500, layer 14, acc 0.777, loss 43.061, avg acc 0.722
-2025-08-01 00:07:36,257 - __main__ - INFO - epoch 0, iter 500, layer 15, acc 0.750, loss 48.926, avg acc 0.704
-  5%|▌         | 252/5000 [00:29<07:29, 10.56it/s]  5%|▌         | 254/5000 [00:29<07:29, 10.56it/s]  5%|▌         | 256/5000 [00:29<07:25, 10.66it/s]  5%|▌         | 258/5000 [00:29<07:25, 10.65it/s]  5%|▌         | 260/5000 [00:29<07:26, 10.63it/s]  5%|▌         | 262/5000 [00:30<07:25, 10.65it/s]  5%|▌         | 264/5000 [00:30<07:25, 10.64it/s]  5%|▌         | 266/5000 [00:30<07:24, 10.65it/s]  5%|▌         | 268/5000 [00:30<07:25, 10.63it/s]  5%|▌         | 270/5000 [00:30<07:24, 10.65it/s]  5%|▌         | 272/5000 [00:31<07:27, 10.56it/s]  5%|▌         | 274/5000 [00:31<07:24, 10.63it/s]  6%|▌         | 276/5000 [00:31<07:22, 10.67it/s]  6%|▌         | 278/5000 [00:31<07:24, 10.61it/s]  6%|▌         | 280/5000 [00:31<07:22, 10.66it/s]  6%|▌         | 282/5000 [00:32<10:03,  7.82it/s]  6%|▌         | 284/5000 [00:32<09:14,  8.51it/s]  6%|▌         | 286/5000 [00:32<08:38,  9.09it/s]  6%|▌         | 288/5000 [00:32<08:15,  9.51it/s]  6%|▌         | 290/5000 [00:33<07:59,  9.82it/s]  6%|▌         | 292/5000 [00:33<07:48, 10.04it/s]  6%|▌         | 294/5000 [00:33<07:41, 10.20it/s]  6%|▌         | 296/5000 [00:33<07:36, 10.30it/s]  6%|▌         | 298/5000 [00:33<07:32, 10.38it/s]  6%|▌         | 300/5000 [00:33<07:29, 10.45it/s]2025-08-01 00:07:41,180 - __main__ - INFO - epoch 0, iter 600, layer 0, acc 0.769, loss 46.317, avg acc 0.693
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 1, acc 0.770, loss 45.540, avg acc 0.697
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 2, acc 0.775, loss 45.175, avg acc 0.699
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 3, acc 0.779, loss 43.423, avg acc 0.711
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 4, acc 0.781, loss 43.302, avg acc 0.709
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 5, acc 0.785, loss 43.340, avg acc 0.704
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 6, acc 0.793, loss 42.192, avg acc 0.707
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 7, acc 0.807, loss 39.487, avg acc 0.710
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 8, acc 0.822, loss 36.975, avg acc 0.726
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 9, acc 0.840, loss 34.080, avg acc 0.738
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 10, acc 0.852, loss 32.409, avg acc 0.744
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 11, acc 0.851, loss 31.455, avg acc 0.744
-2025-08-01 00:07:41,181 - __main__ - INFO - epoch 0, iter 600, layer 12, acc 0.848, loss 32.085, avg acc 0.739
-2025-08-01 00:07:41,182 - __main__ - INFO - epoch 0, iter 600, layer 13, acc 0.844, loss 32.354, avg acc 0.735
-2025-08-01 00:07:41,182 - __main__ - INFO - epoch 0, iter 600, layer 14, acc 0.833, loss 33.597, avg acc 0.733
-2025-08-01 00:07:41,182 - __main__ - INFO - epoch 0, iter 600, layer 15, acc 0.802, loss 38.837, avg acc 0.713
-  6%|▌         | 302/5000 [00:34<07:25, 10.53it/s]  6%|▌         | 304/5000 [00:34<07:24, 10.57it/s]  6%|▌         | 306/5000 [00:34<07:24, 10.57it/s]  6%|▌         | 308/5000 [00:34<07:18, 10.69it/s]  6%|▌         | 310/5000 [00:34<07:20, 10.65it/s]  6%|▌         | 312/5000 [00:35<07:19, 10.68it/s]  6%|▋         | 314/5000 [00:35<07:19, 10.66it/s]  6%|▋         | 316/5000 [00:35<07:20, 10.64it/s]  6%|▋         | 318/5000 [00:35<07:20, 10.62it/s]  6%|▋         | 320/5000 [00:35<07:20, 10.62it/s]  6%|▋         | 322/5000 [00:36<07:19, 10.65it/s]  6%|▋         | 324/5000 [00:36<07:19, 10.64it/s]  7%|▋         | 326/5000 [00:36<07:20, 10.62it/s]  7%|▋         | 328/5000 [00:36<07:18, 10.65it/s]  7%|▋         | 330/5000 [00:36<07:18, 10.64it/s]  7%|▋         | 332/5000 [00:36<07:19, 10.62it/s]  7%|▋         | 334/5000 [00:37<07:21, 10.57it/s]  7%|▋         | 336/5000 [00:37<07:20, 10.59it/s]  7%|▋         | 338/5000 [00:37<07:17, 10.65it/s]  7%|▋         | 340/5000 [00:37<07:17, 10.66it/s]  7%|▋         | 342/5000 [00:38<09:04,  8.56it/s]  7%|▋         | 344/5000 [00:38<08:28,  9.16it/s]  7%|▋         | 346/5000 [00:38<08:06,  9.56it/s]  7%|▋         | 348/5000 [00:38<07:54,  9.81it/s]  7%|▋         | 350/5000 [00:38<07:40, 10.09it/s]2025-08-01 00:07:46,027 - __main__ - INFO - epoch 0, iter 700, layer 0, acc 0.714, loss 56.200, avg acc 0.699
-2025-08-01 00:07:46,027 - __main__ - INFO - epoch 0, iter 700, layer 1, acc 0.717, loss 55.414, avg acc 0.702
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 2, acc 0.717, loss 55.033, avg acc 0.705
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 3, acc 0.711, loss 53.257, avg acc 0.716
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 4, acc 0.714, loss 52.647, avg acc 0.714
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 5, acc 0.717, loss 52.718, avg acc 0.710
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 6, acc 0.736, loss 50.296, avg acc 0.714
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 7, acc 0.752, loss 46.790, avg acc 0.718
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 8, acc 0.775, loss 43.999, avg acc 0.734
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 9, acc 0.785, loss 41.285, avg acc 0.748
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 10, acc 0.806, loss 39.100, avg acc 0.755
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 11, acc 0.816, loss 37.406, avg acc 0.755
-2025-08-01 00:07:46,028 - __main__ - INFO - epoch 0, iter 700, layer 12, acc 0.810, loss 39.029, avg acc 0.751
-2025-08-01 00:07:46,029 - __main__ - INFO - epoch 0, iter 700, layer 13, acc 0.807, loss 39.884, avg acc 0.746
-2025-08-01 00:07:46,029 - __main__ - INFO - epoch 0, iter 700, layer 14, acc 0.787, loss 41.476, avg acc 0.743
-2025-08-01 00:07:46,029 - __main__ - INFO - epoch 0, iter 700, layer 15, acc 0.753, loss 48.720, avg acc 0.721
-  7%|▋         | 352/5000 [00:39<07:35, 10.20it/s]  7%|▋         | 354/5000 [00:39<07:29, 10.34it/s]  7%|▋         | 356/5000 [00:39<07:23, 10.47it/s]  7%|▋         | 358/5000 [00:39<07:19, 10.55it/s]  7%|▋         | 360/5000 [00:39<07:18, 10.58it/s]  7%|▋         | 362/5000 [00:39<07:16, 10.61it/s]  7%|▋         | 364/5000 [00:40<07:15, 10.64it/s]  7%|▋         | 366/5000 [00:40<07:13, 10.69it/s]  7%|▋         | 368/5000 [00:40<07:15, 10.63it/s]  7%|▋         | 370/5000 [00:40<07:16, 10.61it/s]  7%|▋         | 372/5000 [00:40<07:17, 10.58it/s]  7%|▋         | 374/5000 [00:41<07:16, 10.59it/s]  8%|▊         | 376/5000 [00:41<07:15, 10.61it/s]  8%|▊         | 378/5000 [00:41<07:14, 10.63it/s]  8%|▊         | 380/5000 [00:41<07:15, 10.60it/s]  8%|▊         | 382/5000 [00:41<07:16, 10.58it/s]  8%|▊         | 384/5000 [00:42<07:16, 10.58it/s]  8%|▊         | 386/5000 [00:42<07:15, 10.60it/s]  8%|▊         | 388/5000 [00:42<07:14, 10.60it/s]  8%|▊         | 390/5000 [00:42<07:15, 10.58it/s]  8%|▊         | 392/5000 [00:42<09:17,  8.27it/s]  8%|▊         | 394/5000 [00:43<08:39,  8.86it/s]  8%|▊         | 396/5000 [00:43<08:10,  9.38it/s]  8%|▊         | 398/5000 [00:43<07:52,  9.74it/s]  8%|▊         | 400/5000 [00:43<07:44,  9.90it/s]2025-08-01 00:07:50,910 - __main__ - INFO - epoch 0, iter 800, layer 0, acc 0.720, loss 53.882, avg acc 0.703
-2025-08-01 00:07:50,910 - __main__ - INFO - epoch 0, iter 800, layer 1, acc 0.723, loss 53.117, avg acc 0.706
-2025-08-01 00:07:50,910 - __main__ - INFO - epoch 0, iter 800, layer 2, acc 0.726, loss 52.825, avg acc 0.708
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 3, acc 0.734, loss 51.123, avg acc 0.718
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 4, acc 0.737, loss 50.808, avg acc 0.717
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 5, acc 0.741, loss 50.537, avg acc 0.714
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 6, acc 0.755, loss 48.983, avg acc 0.719
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 7, acc 0.764, loss 46.197, avg acc 0.724
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 8, acc 0.786, loss 43.283, avg acc 0.740
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 9, acc 0.802, loss 39.988, avg acc 0.755
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 10, acc 0.813, loss 38.225, avg acc 0.763
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 11, acc 0.826, loss 36.867, avg acc 0.764
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 12, acc 0.811, loss 37.819, avg acc 0.760
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 13, acc 0.806, loss 38.925, avg acc 0.754
-2025-08-01 00:07:50,911 - __main__ - INFO - epoch 0, iter 800, layer 14, acc 0.795, loss 40.521, avg acc 0.751
-2025-08-01 00:07:50,912 - __main__ - INFO - epoch 0, iter 800, layer 15, acc 0.765, loss 46.988, avg acc 0.728
-  8%|▊         | 402/5000 [00:43<07:35, 10.10it/s]  8%|▊         | 404/5000 [00:44<07:28, 10.24it/s]  8%|▊         | 406/5000 [00:44<07:24, 10.33it/s]  8%|▊         | 408/5000 [00:44<07:19, 10.45it/s]  8%|▊         | 410/5000 [00:44<07:16, 10.51it/s]  8%|▊         | 412/5000 [00:44<07:15, 10.53it/s]  8%|▊         | 414/5000 [00:45<07:13, 10.59it/s]  8%|▊         | 416/5000 [00:45<07:12, 10.59it/s]  8%|▊         | 418/5000 [00:45<07:13, 10.57it/s]  8%|▊         | 420/5000 [00:45<07:13, 10.56it/s]  8%|▊         | 422/5000 [00:45<07:10, 10.64it/s]  8%|▊         | 424/5000 [00:45<07:09, 10.66it/s]  9%|▊         | 426/5000 [00:46<07:10, 10.63it/s]  9%|▊         | 428/5000 [00:46<07:10, 10.62it/s]  9%|▊         | 430/5000 [00:46<07:11, 10.60it/s]  9%|▊         | 432/5000 [00:46<07:11, 10.58it/s]  9%|▊         | 434/5000 [00:47<09:37,  7.91it/s]  9%|▊         | 436/5000 [00:47<08:52,  8.57it/s]  9%|▉         | 438/5000 [00:47<08:19,  9.13it/s]  9%|▉         | 440/5000 [00:47<07:57,  9.55it/s]  9%|▉         | 442/5000 [00:47<07:44,  9.81it/s]  9%|▉         | 444/5000 [00:48<07:36,  9.98it/s]  9%|▉         | 446/5000 [00:48<07:27, 10.18it/s]  9%|▉         | 448/5000 [00:48<07:22, 10.30it/s]  9%|▉         | 450/5000 [00:48<07:18, 10.37it/s]2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 0, acc 0.769, loss 46.801, avg acc 0.707
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 1, acc 0.768, loss 46.406, avg acc 0.709
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 2, acc 0.767, loss 46.218, avg acc 0.712
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 3, acc 0.772, loss 44.704, avg acc 0.721
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 4, acc 0.769, loss 44.600, avg acc 0.720
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 5, acc 0.772, loss 44.588, avg acc 0.717
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 6, acc 0.785, loss 42.983, avg acc 0.723
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 7, acc 0.799, loss 39.082, avg acc 0.730
-2025-08-01 00:07:55,835 - __main__ - INFO - epoch 0, iter 900, layer 8, acc 0.814, loss 36.257, avg acc 0.746
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 9, acc 0.833, loss 33.037, avg acc 0.761
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 10, acc 0.846, loss 31.061, avg acc 0.770
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 11, acc 0.851, loss 30.398, avg acc 0.772
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 12, acc 0.848, loss 30.866, avg acc 0.767
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 13, acc 0.847, loss 31.134, avg acc 0.762
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 14, acc 0.840, loss 32.562, avg acc 0.758
-2025-08-01 00:07:55,836 - __main__ - INFO - epoch 0, iter 900, layer 15, acc 0.822, loss 36.626, avg acc 0.734
-  9%|▉         | 452/5000 [00:48<07:16, 10.43it/s]  9%|▉         | 454/5000 [00:49<07:15, 10.44it/s]  9%|▉         | 456/5000 [00:49<07:11, 10.53it/s]  9%|▉         | 458/5000 [00:49<07:08, 10.59it/s]  9%|▉         | 460/5000 [00:49<07:05, 10.66it/s]  9%|▉         | 462/5000 [00:49<07:04, 10.68it/s]  9%|▉         | 464/5000 [00:49<07:05, 10.66it/s]  9%|▉         | 466/5000 [00:50<07:05, 10.67it/s]  9%|▉         | 468/5000 [00:50<07:08, 10.57it/s]  9%|▉         | 470/5000 [00:50<07:10, 10.52it/s]  9%|▉         | 472/5000 [00:50<07:08, 10.58it/s]  9%|▉         | 474/5000 [00:51<08:54,  8.46it/s] 10%|▉         | 476/5000 [00:51<08:19,  9.05it/s] 10%|▉         | 478/5000 [00:51<07:56,  9.49it/s] 10%|▉         | 480/5000 [00:51<07:41,  9.80it/s] 10%|▉         | 482/5000 [00:51<07:29, 10.05it/s] 10%|▉         | 484/5000 [00:51<07:23, 10.19it/s] 10%|▉         | 486/5000 [00:52<07:16, 10.35it/s] 10%|▉         | 488/5000 [00:52<07:13, 10.42it/s] 10%|▉         | 490/5000 [00:52<07:11, 10.46it/s] 10%|▉         | 492/5000 [00:52<07:07, 10.55it/s] 10%|▉         | 494/5000 [00:52<07:06, 10.56it/s] 10%|▉         | 496/5000 [00:53<07:05, 10.59it/s] 10%|▉         | 498/5000 [00:53<07:06, 10.56it/s] 10%|█         | 500/5000 [00:53<07:05, 10.57it/s]2025-08-01 00:08:00,698 - __main__ - INFO - epoch 0, iter 1000, layer 0, acc 0.735, loss 48.624, avg acc 0.710
-2025-08-01 00:08:00,698 - __main__ - INFO - epoch 0, iter 1000, layer 1, acc 0.736, loss 48.066, avg acc 0.712
-2025-08-01 00:08:00,698 - __main__ - INFO - epoch 0, iter 1000, layer 2, acc 0.739, loss 47.791, avg acc 0.714
-2025-08-01 00:08:00,698 - __main__ - INFO - epoch 0, iter 1000, layer 3, acc 0.739, loss 45.505, avg acc 0.723
-2025-08-01 00:08:00,698 - __main__ - INFO - epoch 0, iter 1000, layer 4, acc 0.738, loss 45.336, avg acc 0.722
-2025-08-01 00:08:00,698 - __main__ - INFO - epoch 0, iter 1000, layer 5, acc 0.749, loss 45.404, avg acc 0.720
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 6, acc 0.764, loss 43.846, avg acc 0.727
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 7, acc 0.779, loss 39.592, avg acc 0.735
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 8, acc 0.804, loss 35.756, avg acc 0.751
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 9, acc 0.822, loss 32.815, avg acc 0.767
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 10, acc 0.837, loss 30.907, avg acc 0.776
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 11, acc 0.846, loss 29.314, avg acc 0.779
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 12, acc 0.842, loss 30.033, avg acc 0.774
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 13, acc 0.840, loss 30.731, avg acc 0.768
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 14, acc 0.836, loss 31.656, avg acc 0.764
-2025-08-01 00:08:00,699 - __main__ - INFO - epoch 0, iter 1000, layer 15, acc 0.794, loss 37.082, avg acc 0.739
-2025-08-01 00:08:04,663 - __main__ - INFO - epoch 0, layer 0, train loss: 50.933, val loss: 50.914, train acc: 0.736, val acc: 0.733
-2025-08-01 00:08:04,663 - __main__ - INFO - epoch 0, layer 1, train loss: 50.495, val loss: 50.484, train acc: 0.737, val acc: 0.733
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 2, train loss: 50.274, val loss: 50.259, train acc: 0.737, val acc: 0.734
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 3, train loss: 48.717, val loss: 48.656, train acc: 0.740, val acc: 0.737
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 4, train loss: 48.282, val loss: 48.247, train acc: 0.744, val acc: 0.739
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 5, train loss: 48.298, val loss: 48.292, train acc: 0.747, val acc: 0.742
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 6, train loss: 46.334, val loss: 46.403, train acc: 0.762, val acc: 0.757
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 7, train loss: 42.745, val loss: 42.729, train acc: 0.780, val acc: 0.774
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 8, train loss: 39.684, val loss: 39.429, train acc: 0.798, val acc: 0.794
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 9, train loss: 36.045, val loss: 35.889, train acc: 0.819, val acc: 0.814
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 10, train loss: 33.867, val loss: 33.621, train acc: 0.833, val acc: 0.829
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 11, train loss: 32.655, val loss: 32.426, train acc: 0.840, val acc: 0.838
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 12, train loss: 33.427, val loss: 33.231, train acc: 0.836, val acc: 0.833
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 13, train loss: 34.216, val loss: 34.061, train acc: 0.829, val acc: 0.825
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 14, train loss: 35.823, val loss: 35.656, train acc: 0.819, val acc: 0.815
-2025-08-01 00:08:04,664 - __main__ - INFO - epoch 0, layer 15, train loss: 41.581, val loss: 41.549, train acc: 0.788, val acc: 0.785
- 10%|█         | 502/5000 [00:57<51:42,  1.45it/s] 10%|█         | 504/5000 [00:57<38:18,  1.96it/s] 10%|█         | 506/5000 [00:58<28:56,  2.59it/s] 10%|█         | 508/5000 [00:58<22:20,  3.35it/s] 10%|█         | 510/5000 [00:58<17:45,  4.22it/s] 10%|█         | 512/5000 [00:58<14:31,  5.15it/s] 10%|█         | 514/5000 [00:58<12:15,  6.10it/s] 10%|█         | 516/5000 [00:58<10:38,  7.02it/s] 10%|█         | 518/5000 [00:59<09:33,  7.82it/s] 10%|█         | 520/5000 [00:59<08:51,  8.44it/s] 10%|█         | 522/5000 [00:59<08:19,  8.96it/s] 10%|█         | 524/5000 [00:59<07:55,  9.41it/s] 11%|█         | 526/5000 [00:59<07:40,  9.73it/s] 11%|█         | 528/5000 [01:00<07:29,  9.95it/s] 11%|█         | 530/5000 [01:00<09:53,  7.53it/s] 11%|█         | 532/5000 [01:00<09:01,  8.24it/s] 11%|█         | 534/5000 [01:00<08:25,  8.83it/s] 11%|█         | 536/5000 [01:01<07:59,  9.30it/s] 11%|█         | 538/5000 [01:01<07:41,  9.68it/s] 11%|█         | 540/5000 [01:01<07:28,  9.94it/s] 11%|█         | 542/5000 [01:01<07:23, 10.05it/s] 11%|█         | 544/5000 [01:01<07:13, 10.27it/s] 11%|█         | 546/5000 [01:02<07:12, 10.30it/s] 11%|█         | 548/5000 [01:02<07:07, 10.41it/s]

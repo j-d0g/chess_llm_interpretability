@@ -1,11 +1,12 @@
 __pycache__/
 **/.vscode
 wandb/
+.ipynb_checkpoints/
+.DS_Store
+.env
 
 data/*
-!data/train.csv
-!data/test.csv
-!data/train_test_splitter.ipynb
+!data/README.md
 
 models/*
 !models/meta.pkl
@@ -13,3 +14,21 @@ models/*
 
 contrastive_activations/*
 intervention_logs/*
+
+# Logs and job outputs
+logs/**
+.last_submit_id
+
+# Local environments
+venv/
+.venv/
+
+# Probe artifacts and test data
+linear_probes/test_data/**
+linear_probes/**/*.pth
+linear_probes/*.pth
+
+# Results: keep markdown summaries, ignore heavy CSV/JSON if any are large
+results/*.csv
+results/*.json
+!results/*.md

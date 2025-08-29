@@ -12,6 +12,7 @@ from jaxtyping import Int, Float, jaxtyped
 from torch import Tensor
 from beartype import beartype
 import collections
+import os
 
 import chess_utils
 import othello_engine_utils
@@ -877,75 +878,63 @@ if __name__ == "__main__":
     args = parse_arguments()
     WANDB_LOGGING = args.wandb_logging
     if args.mode == "test":
-        # saved_probes = [
-        #     file
-        #     for file in os.listdir(SAVED_PROBE_DIR)
-        #     if os.path.isfile(os.path.join(SAVED_PROBE_DIR, file))
-        # ]
-        saved_probes = []
+        # Use command line arguments for test mode
+        config = chess_utils.piece_config
+        if args.probe == "skill":
+            config = chess_utils.skill_config
 
-        # Quick and janky way to select between piece and skill probes
-        if args.probe == "piece":
-            saved_probes = [
-                "tf_lens_lichess_8layers_ckpt_no_optimizer_chess_piece_probe_layer_5.pth"
-            ]
-        elif args.probe == "skill":
-            saved_probes = [
-                "tf_lens_lichess_8layers_ckpt_no_optimizer_chess_skill_probe_layer_5.pth"
-            ]
+        # Use command line arguments
+        dataset_prefix = args.dataset_prefix
+        n_layers = args.n_layers
+        first_layer = args.first_layer
+        last_layer = args.last_layer if args.last_layer is not None else n_layers - 1
+        
+        # Set model name
+        if args.model_name is not None:
+            model_name = args.model_name
+        else:
+            model_name = f"tf_lens_{args.model_size}-{n_layers}-600k_iters"
 
-        print(saved_probes)
+        split = "test"
+        player_color = PlayerColor.WHITE
 
-        # NOTE: This is very inefficient. The expensive part is forwarding the GPT, which we should only have to do once.
-        # With little effort, we could test probes on all layers at once. This would be much faster.
-        # But, I can test the probes in 20 minutes and it was a one-off thing, so I didn't bother.
-        # My strategy for development / hyperparameter testing was to iterate on the train side, then do the final test on the test side.
-        # As long as you have a reasonable training dataset size, you should be able to get a good idea of final test accuracy
-        # by looking at the training accuracy after a few epochs.
-        for probe_to_test in saved_probes:
-            probe_file_location = f"{SAVED_PROBE_DIR}{probe_to_test}"
-            # We will populate all parameters using information in the probe state dict
-            with open(probe_file_location, "rb") as f:
-                state_dict = torch.load(f, map_location=torch.device(DEVICE))
-                print(state_dict.keys())
-                for key in state_dict.keys():
-                    if key != "linear_probe":
-                        print(key, state_dict[key])
+        input_dataframe_file = f"{DATA_DIR}{dataset_prefix}{split}.csv"
+        config = chess_utils.set_config_min_max_vals_and_column_name(
+            config, input_dataframe_file, dataset_prefix
+        )
+        config = chess_utils.update_config_using_player_color(
+            player_color, config, None
+        )
 
-                config = chess_utils.find_config_by_name(state_dict["config_name"])
-                layer = state_dict["layer"]
-                model_name = state_dict["model_name"]
-                dataset_prefix = state_dict["dataset_prefix"]
-                config.pos_start = state_dict["pos_start"]
-                levels_of_interest = None
-                if "levels_of_interest" in state_dict.keys():
-                    levels_of_interest = state_dict["levels_of_interest"]
-                config.levels_of_interest = levels_of_interest
-                n_layers = state_dict["n_layers"]
-                split = "test"
+        # Load test data once for all layers
+        probe_data = construct_linear_probe_data(
+            input_dataframe_file,
+            dataset_prefix,
+            n_layers,
+            model_name,
+            config,
+            TRAIN_PARAMS.max_test_games,
+            DEVICE,
+        )
 
-                input_dataframe_file = f"{DATA_DIR}{dataset_prefix}{split}.csv"
-                config = chess_utils.set_config_min_max_vals_and_column_name(
-                    config, input_dataframe_file, dataset_prefix
-                )
+        # Test all layers
+        for layer in range(first_layer, last_layer + 1):
+            probe_file_location = f"{PROBE_DIR}{model_name}_{config.linear_probe_name}_layer_{layer}.pth"
+            
+            # Check if probe file exists
+            if not os.path.exists(probe_file_location):
+                logger.warning(f"Probe file not found: {probe_file_location}")
+                continue
+                
+            logging_dict = init_logging_dict(
+                layer, config, split, dataset_prefix, model_name, n_layers, TRAIN_PARAMS
+            )
 
-                probe_data = construct_linear_probe_data(
-                    input_dataframe_file,
-                    dataset_prefix,
-                    n_layers,
-                    model_name,
-                    config,
-                    TRAIN_PARAMS.max_test_games,
-                    DEVICE,
-                )
-
-                logging_dict = init_logging_dict(
-                    layer, config, split, dataset_prefix, model_name, n_layers, TRAIN_PARAMS
-                )
-
-                test_linear_probe_cross_entropy(
-                    probe_file_location, probe_data, config, logging_dict, TRAIN_PARAMS
-                )
+            logger.info(f"Testing layer {layer} probe: {probe_file_location}")
+            test_accuracy = test_linear_probe_cross_entropy(
+                probe_file_location, probe_data, config, logging_dict, TRAIN_PARAMS
+            )
+            logger.info(f"Layer {layer} test accuracy: {test_accuracy:.4f}")
     elif args.mode == "train":
         config = chess_utils.piece_config
         if args.probe == "skill":

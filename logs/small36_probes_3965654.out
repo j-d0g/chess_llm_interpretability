@@ -1,3 +1,0 @@
-ERROR: Unable to locate a modulefile for 'Python/3.10.8-GCCcore-12.2.0'
-Moving model to device:  cuda
-Shortest length: 64
